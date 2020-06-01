@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <import type="androidx.databinding.ObservableMap" />
+
+        <import type="androidx.databinding.ObservableList" />
+
+        <variable
+            name="userModel"
+            type="com.zhou.databinding.UserModel" />
+
+        <variable
+            name="map"
+            type="ObservableMap&lt;String, Object>" />
+
+        <!-- 首先在这里定义，然后才能在代码中使用 -->
+        <!-- 定义顶层字段 -->
+        <variable
+            name="title"
+            type="java.lang.String" />
+
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={title}"
+            android:textSize="30sp"
+            tools:text="title:" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{userModel.user.name}"
+            android:textSize="30sp"
+            tools:text="userModel:" />
+
+        <Button
+            android:id="@+id/btnChangeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="改变标题" />
+
+        <Button
+            android:id="@+id/btnToastTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="toast显示新的标题" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{userModel.user.name}"
+            android:textSize="30sp"
+            tools:text="@{String.valueOf(map.count)}" />
+
+    </LinearLayout>
+</layout>

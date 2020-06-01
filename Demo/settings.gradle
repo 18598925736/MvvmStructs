@@ -1,0 +1,2 @@
+include ':app', ':databinding', ':livedata'
+rootProject.name='MvvnStructs'
