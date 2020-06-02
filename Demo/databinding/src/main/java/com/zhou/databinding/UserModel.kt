@@ -1,8 +1,6 @@
 package com.zhou.databinding
 
-import androidx.lifecycle.ViewModel
-
-class UserModel : ViewModel() {
+class UserModel  {
 
     val user = User("hank001", "man")
 

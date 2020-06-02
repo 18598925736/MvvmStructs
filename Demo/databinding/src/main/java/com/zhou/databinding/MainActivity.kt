@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.title = "asfdsaf"
+        binding.btnChangeTitle
 
         val map = ObservableArrayMap<String, Any>().apply { put("count", 0) }
         binding.map = map
